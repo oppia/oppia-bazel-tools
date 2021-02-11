@@ -8,13 +8,13 @@ Android.
 In order to use this repository to be able to build Oppia Android, we suggest
 using the following steps:
 1. ``cd ~/opensource`` (or the directory containing your oppia-android repository).
-2. ``git clone https://github.com/oppia/oppia-bazel-assets``
+2. ``git clone https://github.com/oppia/oppia-bazel-tools``
 3. Update your ~/.bazelrc file to override the Android tools repository to point
    to this new location, and enable AndroidX testing. Or, just run this command
    (note that this overrides your profile-level bazelrc file, so you may want to
    copy this manually if you have other configurations already setup for Bazel):
    ```bash
-   ASSETS_PATH=~/opensource/oppia-bazel-assets echo build --override_repository=android_tools="$(cd "$(dirname "$ASSETS_PATH")"; pwd)/$(basename "$ASSETS_PATH")" > ~/.bazelrc
+   ASSETS_PATH=~/opensource/oppia-bazel-tools echo build --override_repository=android_tools="$(cd "$(dirname "$ASSETS_PATH")"; pwd)/$(basename "$ASSETS_PATH")" > ~/.bazelrc
    echo build --android_databinding_use_androidx > ~/.bazelrc
    ```
 
