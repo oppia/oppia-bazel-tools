@@ -14,7 +14,7 @@ using the following steps:
    (note that this overrides your profile-level bazelrc file, so you may want to
    copy this manually if you have other configurations already setup for Bazel):
    ```bash
-   echo build --override_repository=android_tools="$(cd "$(dirname "~/opensource/oppia-bazel-tools")"; pwd)/$(basename "~/opensource/oppia-bazel-tools")" > ~/.bazelrc
+   echo build --override_repository=android_tools="$(cd "$(dirname "$HOME/opensource/oppia-bazel-tools")"; pwd)/$(basename "$HOME/opensource/oppia-bazel-tools")" > ~/.bazelrc
    echo build --android_databinding_use_androidx >> ~/.bazelrc
    ```
 
